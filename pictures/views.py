@@ -5,3 +5,7 @@ from .models import Image
 def index(request):
     images = Image.objects.all()
     return render(request,'index.html',{'images':images})
+
+
+def upload_image(request):
+    return render(request,'upload.html')
