@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>works</h1>
+{% load cloudinary %}
+<form method="POST">
+    {% csrf_token %}
+    {{ form.image }}
+
+</form>
+<div>
+    <input type="submit" value="upload">
+</div>
+
 
 {% endblock %}

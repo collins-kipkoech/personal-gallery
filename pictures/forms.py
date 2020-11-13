@@ -3,6 +3,6 @@ from .models import Image
 
 
 class ImageForm(forms.ModelForm):
-    class meta:
+    class Meta:
         model = Image
         fields = '__all__'

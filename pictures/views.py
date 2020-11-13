@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Image
+from .forms import ImageForm
 
 # Create your views here.
 def index(request):
@@ -8,4 +9,5 @@ def index(request):
 
 
 def upload_image(request):
-    return render(request,'upload.html')
+    form = ImageForm()
+    return render(request,'upload.html',{'form':form})
