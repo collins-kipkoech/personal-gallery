@@ -14,14 +14,14 @@ class Category(models.Model):
 
 class Location(models.Model):
     name = models.CharField(max_length=60,db_index=True)
-     slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=True)
 
 
     def __str__(self):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('images:images_by_location',args=[self.slug,])
+        return reverse('image:images_by_location',args=[self.slug,])
 
 
 
@@ -40,4 +40,4 @@ class Image(models.Model):
         ordering = ['image_title']
 
     def get_absolute_url(self):
-        return reverse('images:images_details',args=[self.id,])
+        return reverse('image:image_details',args=[self.id,])

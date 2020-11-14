@@ -5,11 +5,11 @@
                 <h2>Locations</h2>
                 <ul>
                     <li>
-                        <a href="{% url 'images:images_list' %}">All</a>
+                        <a href="{% url 'image:images_list' %}">All</a>
                     </li>
-                    {% for location in locations %}
+                    {% for l in locations %}
                         <li>
-                            <a href="{{ location.get_absolute_url }}">{{ location.name}}</a>
+                            <a href="{{ l.get_absolute_url }}">{{ l.name}}</a>
                         </li>
                     {% endfor %}
                 </ul>
