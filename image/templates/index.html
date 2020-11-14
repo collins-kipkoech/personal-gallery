@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div>
+                <h2>Locations</h2>
+                <ul>
+                    <li>
+                        <a href="{% url 'images:images_list' %}">All</a>
+                    </li>
+                    {% for location in locations %}
+                        <li>
+                            <a href="{{ location.get_absolute_url }}">{{ location.name}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                <h2>
+                    {% if location %}
+                        {{ location.name }}
+                    {% else %}
+                        <h2>IMAGES</h2>
+                    {% endif %}
+                    {% for image in images %}
+                        <a href="{{ image.get_absolute_url }}">
+                            {{ image.title }}
+                        </a>
+                    {% endfor %}
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
