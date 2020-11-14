@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Category(models.Model):
@@ -19,6 +20,9 @@ class Location(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('images:images_by_location',args=[self.slug,])
+
 
 
 class Image(models.Model):
@@ -34,3 +38,6 @@ class Image(models.Model):
     
     class Meta:
         ordering = ['image_name']
+
+    def get_absolute_url(self):
+        return reverse('images:images_details',args=[self.id,])
