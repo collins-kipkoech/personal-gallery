@@ -13,8 +13,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-    def get_absolute_url(self):
-        return reverse('image:image_by_category',args=['self.slug',])
+    
 
 
 
@@ -44,7 +43,6 @@ class Image(models.Model):
         return self.title
 
 
-    def get_absolute_url(self):
-        return reverse('image:image_details',args=['self.id',])
+    
     
 

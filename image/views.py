@@ -5,12 +5,12 @@ from .forms import ImageForm
 # Create your views here.
 def index(request,category_slug=None):
     category = None
-    category = Category.objects.all()
-    image = Image.objects.all()
+    categories = Category.objects.all()
+    images = Image.objects.all()
     if category_slug:
         category = get_object_or_404(Category,category=category_slug)
         image = image.filter(category=category)
-    return render(request,'index.html',{'categories':categories,'category':category,'image':image,})
+    return render(request,'index.html',{'categories':categories,'category':category,'images':images,})
 
 
 def image_details(request,id):
