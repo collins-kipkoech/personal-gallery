@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '2p0yn9pcx(=-t71%-#4cbcqtcx%zy@kt&jjx=kv=@+0p-dohy1'
+SECRET_KEY = ')kx=+o$%lykwlbp=o009!7pl0m_uw2&%i2(&c4j(&at-@4--79'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,9 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'image',
-    'bootstrap4',
-    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -81,10 +75,8 @@ WSGI_APPLICATION = 'gallery.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gallery',
-        'USER': 'moringa',
-    'PASSWORD':'colo1234',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -113,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Africa/Nairobi'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -126,10 +118,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-
-cloudinary.config( 
-  cloud_name = "dtydg6xpa", 
-  api_key = "568552354739641", 
-  api_secret = "plPkmm4WcrylYnuoJxu3gSNNTuI" 
-)
