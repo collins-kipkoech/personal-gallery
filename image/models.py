@@ -21,7 +21,7 @@ class Location(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('image:images_by_location',args=[self.slug,])
+        return reverse('image:images_by_location',args=[self.slug])
 
 
 
@@ -40,4 +40,4 @@ class Image(models.Model):
         ordering = ['image_title']
 
     def get_absolute_url(self):
-        return reverse('image:image_details',args=[self.id,])
+        return reverse('image:image_details',args=[self.id])

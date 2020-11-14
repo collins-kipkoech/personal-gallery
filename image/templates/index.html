@@ -21,9 +21,9 @@
                     {% else %}
                         <h2>IMAGES</h2>
                     {% endif %}
-                    {% for image in images %}
-                        <a href="{{ image.get_absolute_url }}">
-                            {{ image.title }}
+                    {% for img in images %}
+                        <a href="{{ img.get_absolute_url }}">
+                            {{ img.image_title }}
                         </a>
                     {% endfor %}
                 </h2>
