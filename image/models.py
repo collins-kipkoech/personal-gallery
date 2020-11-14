@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Category(models.Model):
@@ -26,7 +27,7 @@ class Location(models.Model):
 
 
 class Image(models.Model):
-    
+    image = CloudinaryField('image')
     image_title = models.CharField(max_length=60)
     image_description = models.TextField()
     category = models.ForeignKey(Category,on_delete=models.CASCADE)
