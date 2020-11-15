@@ -13,6 +13,8 @@ class Category(models.Model):
 
     class Meta:
         ordering = ['name']
+    
+    
 
 class Location(models.Model):
     name = models.CharField(max_length=60,db_index=True)

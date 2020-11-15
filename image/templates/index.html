@@ -11,12 +11,14 @@
                         
                 {% endfor %}
                 
-            </div>
+            </div><br>
             <div>
-                <form action="{% url 'image:search_category' %}" method="GET">
-                    <input type="text" name="search">
-                    <button type="submit">Search</button>
-                </form>
+                <form class="form-inline" role="search" action="{% url 'image:search_category' %}" method="GET" >
+                    <div class="input-group">
+                    <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </div>
+                  </form>
             </div>
             <div>
                 <h2>
@@ -33,7 +35,8 @@
                         </a>
                     {% endfor %}
                 </h2>
-            </div>z
+            </div><br>
+           
         </div>
     </div>
 </div>
