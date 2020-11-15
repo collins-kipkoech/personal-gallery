@@ -20,8 +20,7 @@ def image_details(request,id):
     return render(request,'image_details.html',{'images':images})
 
 
-def upload_image(request):
-    return render(request,'upload.html')
+
 
 
 
