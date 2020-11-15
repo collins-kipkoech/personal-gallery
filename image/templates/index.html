@@ -2,17 +2,15 @@
     <div class="row">
         <div class="col-lg-12">
             <div>
-                <h2>Locations</h2>
-                <ul>
-                    <li>
-                        <a href="{% url 'image:images_list' %}">All</a>
-                    </li>
-                    {% for l in locations %}
-                        <li>
-                            <a href="{{ l.get_absolute_url }}">{{ l.name}}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
+                Locations:
+                <a href="{% url 'image:images_list' %}">All</a>
+               
+                {% for l in locations %}
+                    
+                        <a href="{{ l.get_absolute_url }}">{{ l.name}}</a>
+                        
+                {% endfor %}
+                
             </div>
             <div>
                 <h2>
@@ -22,8 +20,10 @@
                         <h2>IMAGES</h2>
                     {% endif %}
                     {% for img in images %}
+                        
                         <a href="{{ img.get_absolute_url }}">
-                            {{ img.image_title }}
+                            <img src="{{ img.image.url }}" style="width: 300px; height: 250px;">
+                            
                         </a>
                     {% endfor %}
                 </h2>
