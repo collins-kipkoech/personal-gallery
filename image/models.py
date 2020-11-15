@@ -5,6 +5,7 @@ from cloudinary.models import CloudinaryField
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=50)
+    
    
 
     def __str__(self):
@@ -40,5 +41,4 @@ class Image(models.Model):
     class Meta:
         ordering = ['image_title']
 
-    def get_absolute_url(self):
-        return reverse('image:image_details',args=[self.id])
+    

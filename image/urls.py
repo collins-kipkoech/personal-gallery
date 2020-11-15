@@ -7,5 +7,6 @@ app_name = 'image'
 urlpatterns =[
     path('',views.index,name='images_list'),
     path('<slug:location_slug>',views.index,name='images_by_location'),
-    path('<int:id>/',views.image_details,name='image_details'),
+    path('search_category/',views.search_category,name='search_category'),
+    
 ]

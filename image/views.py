@@ -15,12 +15,18 @@ def index(request,location_slug=None):
     return render(request,'index.html',{'locations':locations,location:location,'images':images})
 
 
-def image_details(request,id):
-    images = get_object_or_404(Image,id=id)
-    return render(request,'image_details.html',{'images':images})
+# def image_details(request,id):
+#     images = get_object_or_404(Image,id=id)
+#     return render(request,'image_details.html',{'images':images})
 
 
-
+def search_category(request):
+    if request.method == 'GET':
+        search = request.GET.get('search')
+        category = Category.objects.all().filter(name=search)
+        return render(request,'search.html',{'category':category})
+        
+    
 
 
 
