@@ -5,9 +5,9 @@ Gallery App is a simple web based platform for viewing pictures. Users can view 
 
 Links 
 
-Active link:
+Active link: https://ckgallery.herokuapp.com/
 
-Figma link:
+Figma link: https://www.figma.com/proto/rXP4qbVRee5042BTcAz9P6/gallery-app?node-id=1%3A2&scaling=min-zoom
 
 Technologies
 
