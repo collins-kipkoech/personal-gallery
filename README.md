@@ -14,6 +14,10 @@ Active link: https://ckgallery.herokuapp.com/
 
 Figma link: https://www.figma.com/proto/rXP4qbVRee5042BTcAz9P6/gallery-app?node-id=1%3A2&scaling=min-zoom
 
+ERD link: https://lucid.app/lucidchart/6e9692fa-00f2-4b13-b085-abdf51011fd7/edit?beaconFlowId=C8EC4A0755DB0B93&page=0_0#?folder_id=home&browser=list
+
+
+
 Technologies
 
 1. Python 3.6
