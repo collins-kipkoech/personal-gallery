@@ -30,7 +30,7 @@ class Location(models.Model):
 
 
 class Image(models.Model):
-    image = CloudinaryField('image')
+    image = CloudinaryField('image',null=True)
     image_title = models.CharField(max_length=60)
     image_description = models.TextField()
     category = models.ForeignKey(Category,on_delete=models.CASCADE)
