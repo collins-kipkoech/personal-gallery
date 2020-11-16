@@ -27,7 +27,7 @@ def search_category(request):
         
         return render(request,'search.html',{'category':category })
 
-def single(request,article_id):
+def single(request,image_id):
     try:
         image = Image.objects.get(id = image_id)
     except DoesNotExist:

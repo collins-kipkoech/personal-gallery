@@ -3,6 +3,11 @@ Gallery App
 Description
 Gallery App is a simple web based platform for viewing pictures. Users can view images posted by the admin. A user can filter images by location and search images based on gategory. A user can view image details by clicking a single image.
 
+
+screenshot
+
+![image](https://user-images.githubusercontent.com/68596898/99283830-93f41200-2846-11eb-89b2-13bcdbdfadfb.png)
+
 Links 
 
 Active link: https://ckgallery.herokuapp.com/
@@ -36,4 +41,4 @@ colookipkoech95@gmail.com
 
 License
 
-[LICENSE](LICENSE.md)
+[MIT](LICENSE.md)
