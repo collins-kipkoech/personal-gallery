@@ -27,12 +27,16 @@ def search_category(request):
         
         return render(request,'search.html',{'category':category })
 
-def single(request,image_id):
+# def details(request,image_id):
+#     image = get_object_or_404(Image,pk=image_id)
+#     return render(request,"image_details.html",{'image':image})
+
+def details(request,image_id):
     try:
-        image = Image.objects.get(id = image_id)
+        image = Image.objects.get(pk = image_id)
     except DoesNotExist:
         raise Http404()
-    return render(request,"single.html", {"image":image})
+    return render(request,"image_details.html", {"image":image})
         
     
 

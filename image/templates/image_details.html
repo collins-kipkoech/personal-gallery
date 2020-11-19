@@ -2,9 +2,21 @@
     <div class="row">
         <div class="col">
             <h1>IMAGE DETAILS</h1>
-            <img src="{{ img.image.url }}">
-            <h2>IMAGE TITLE: {{ images.image_title }}</h2>
-            <h3>Description: {{ images.image_description }}</h3>
+            
+            <h2></h2>
+            <h3></h3>
         </div>
     </div>
 </div>
+
+<div class="card-deck">
+    <div class="card">
+        <img src="{{ image.image.url }}" style="width: 400px; height: 500px;">
+      <div class="card-body">
+        <h5 class="card-title">IMAGE TITLE: {{ image.image_title }}</h5>
+        <p class="card-text">Description: {{ image.image_description }}</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted"></small>
+      </div>
+    </div>

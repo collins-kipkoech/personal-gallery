@@ -29,10 +29,10 @@
                     {% else %}
                         <h2>IMAGES</h2>
                     {% endif %}
-                    {% for img in images %}
+                    {% for image in images %}
                         
-                        <a href="{{ img.get_absolute_url }}">
-                            <img src="{{ img.image.url }}" style="width: 300px; height: 250px;">
+                        <a href="{% url 'image:details' image.id %}">
+                            <img src="{{ image.image.url }}" style="width: 300px; height: 250px;">
                             
                         </a>
                     {% endfor %}
